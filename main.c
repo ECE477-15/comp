@@ -28,7 +28,7 @@ void comp2_gpio_init() {
 	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;	// RCC_SYSCFG_CLK_ENABLE
 	RCC->IOPENR |= RCC_IOPENR_GPIOBEN;		// GPIOB Clock enable
 
-	GPIOB->MODER |= ~GPIO_MODER_MODE7;		// analog mode
+	GPIOB->MODER |= GPIO_MODER_MODE7;		// analog mode
 	GPIOB->PUPDR &= ~GPIO_PUPDR_PUPD7_Msk;	// no pullup/down
 }
 
